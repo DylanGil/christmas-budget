@@ -1,16 +1,10 @@
 import { signOutAction } from "@/app/actions";
-import { createClient } from "@/lib/supabase/server";
 import Link from "next/link";
+import { isAuth } from "./isAuth";
 import { Button } from "./ui/button";
 
 export default async function AuthButton() {
-  const supabase = await createClient();
-
-  const {
-    data: { user },
-  } = await supabase.auth.getUser();
-
-  return user ? (
+  return (await isAuth()) ? (
     <div className="flex items-center gap-4">
       {/* Hey, {user.email} ! */}
       <form action={signOutAction}>
