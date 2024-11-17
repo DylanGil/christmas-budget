@@ -1,3 +1,4 @@
+import { Footer } from "@/components/layout/footer";
 import { Header } from "@/components/layout/header";
 import { TailwindIndicator } from "@/components/TailwindIndicator";
 import { ThemeProvider } from "@/components/theme-provider";
@@ -30,14 +31,13 @@ export default function RootLayout({
   return (
     <html lang="fr" suppressHydrationWarning>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} flex min-h-dvh flex-col antialiased`}
       >
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <Header />
-          <div className="flex h-screen flex-col">
-            <div className="grow">{children}</div>
-          </div>
+          <main className="flex grow flex-col">{children}</main>
           <TailwindIndicator />
+          <Footer />
           <Toaster />
         </ThemeProvider>
       </body>

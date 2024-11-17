@@ -6,7 +6,7 @@ export default async function Page() {
   return (await isAuth()) ? (
     redirect("/")
   ) : (
-    <div className="flex h-screen w-full items-center justify-center px-4">
+    <div className="flex flex-1 items-center justify-center">
       <LoginForm />
     </div>
   );

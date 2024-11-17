@@ -9,7 +9,7 @@ export const Header = () => {
       <div className="flex w-full items-center justify-start">
         <p
           className="
-              cursor-pointer transition-colors duration-200 hover:text-primary sm:text-3xl"
+              ml-5 cursor-pointer transition-colors duration-200 hover:text-primary sm:text-3xl"
         >
           <Link href="/">
             <strong>Christmas Budget</strong>
