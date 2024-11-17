@@ -20,6 +20,7 @@ import {
 import { Input } from "@/components/ui/input";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { zodResolver } from "@hookform/resolvers/zod";
+import { Loader2 } from "lucide-react";
 import { useSearchParams } from "next/navigation";
 import { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
@@ -28,6 +29,7 @@ import { z } from "zod";
 export function LoginForm() {
   const searchParams = useSearchParams();
   const [errorMessage, setErrorMessage] = useState<string | null>(null);
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     const error = searchParams.get("error");
@@ -53,10 +55,12 @@ export function LoginForm() {
     values: z.infer<typeof formSchema>,
     action: (email: string, password: string) => Promise<string | null>
   ) {
+    setLoading(true);
     const resMessage = await action(values.email, values.password);
     if (resMessage) {
       setErrorMessage(resMessage);
     }
+    setLoading(false);
   }
 
   return (
@@ -125,9 +129,18 @@ export function LoginForm() {
                       )}
                     />
                   </div>
-                  <Button type="submit" className="w-full">
-                    Se connecter
-                  </Button>
+                  {loading ? (
+                    <div className="flex justify-center">
+                      <Button disabled type="submit" className="w-full">
+                        <Loader2 className="mr-2 size-4 animate-spin" />
+                        Se connecter
+                      </Button>
+                    </div>
+                  ) : (
+                    <Button type="submit" className="w-full">
+                      Se connecter
+                    </Button>
+                  )}
                 </div>
               </CardContent>
               {errorMessage && (
@@ -199,9 +212,18 @@ export function LoginForm() {
                       )}
                     />
                   </div>
-                  <Button type="submit" className="w-full">
-                    S&apos;inscrire
-                  </Button>
+                  {loading ? (
+                    <div className="flex justify-center">
+                      <Button disabled type="submit" className="w-full">
+                        <Loader2 className="mr-2 size-4 animate-spin" />
+                        S&apos;inscrire
+                      </Button>
+                    </div>
+                  ) : (
+                    <Button type="submit" className="w-full">
+                      S&apos;inscrire
+                    </Button>
+                  )}
                 </div>
               </CardContent>
               {errorMessage && (
