@@ -1,10 +1,10 @@
 import { signOutAction } from "@/app/actions";
 import Link from "next/link";
-import { isAuth } from "./isAuth";
 import { Button } from "./ui/button";
+import { getUser } from "./utils";
 
 export default async function AuthButton() {
-  return (await isAuth()) ? (
+  return (await getUser()) ? (
     <div className="flex items-center gap-4">
       {/* Hey, {user.email} ! */}
       <form action={signOutAction}>

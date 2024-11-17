@@ -1,11 +1,11 @@
-"use server";
+import { User } from "@/app/types";
 import { createClient } from "@/lib/supabase/server";
 
-export const isAuth = async () => {
+export const getUser = async () => {
   const supabase = await createClient();
 
   const {
     data: { user },
   } = await supabase.auth.getUser();
-  return user ? true : false;
+  return user ? (user as unknown as User) : null;
 };
