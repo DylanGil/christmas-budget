@@ -5,8 +5,8 @@ import { Charts } from "./Charts";
 
 const Stat = ({ title, value }: { title: string; value: number | string }) => {
   return (
-    <Card className="flex flex-col text-center xl:w-40 h-15">
-      <div className="flex flex-col bg-accent text-secondary max-md:px-1 font-semibold">
+    <Card className="flex flex-col text-center xl:w-40 h-15 border-2">
+      <div className="flex flex-col bg-accent text-secondary max-md:px-1 font-semibold rounded-t-md">
         {title}
       </div>
       <p className="text-xl font-bold text-primary">{value}</p>

@@ -11,11 +11,9 @@ import { Pie, PieChart } from "recharts";
 export const Charts = ({
   recipients,
   choice,
-  className,
 }: {
   recipients: Recipient[];
   choice: 1 | 2;
-  className?: string;
 }) => {
   const categoriesAmountObject = recipients.reduce(
     (acc, recipient) => {
