@@ -1,7 +1,6 @@
-import { signOutAction } from "@/app/actions";
+import { getUser, signOutAction } from "@/app/actions";
 import Link from "next/link";
 import { Button } from "./ui/button";
-import { getUser } from "./utils";
 
 export default async function AuthButton() {
   return (await getUser()) ? (

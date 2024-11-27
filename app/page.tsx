@@ -1,5 +1,5 @@
+import { getUser } from "@/app/actions";
 import MainContent from "@/components/MainContent";
-import { getUser } from "@/components/utils";
 import { createClient } from "@/lib/supabase/server";
 import { Recipient } from "./types";
 
