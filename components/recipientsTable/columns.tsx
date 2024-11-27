@@ -99,7 +99,7 @@ export const CreateColumns = (
                       setRecipients(
                         recipients.filter((d) => d.id !== recipient.id)
                       );
-                      deleteRecipient(recipient.id);
+                      deleteRecipient(recipient.id as number);
                       toast("Destinataire supprimé");
                     }}
                   >
