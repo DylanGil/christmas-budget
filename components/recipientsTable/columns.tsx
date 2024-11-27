@@ -159,17 +159,47 @@ export const CreateColumns = (
       header: ({ column }) => (
         <DataTableColumnHeader column={column} title="Budget" />
       ),
+      cell: ({ row }) => (
+        <div>{row.getValue("budget") ? row.getValue("budget") + " €" : ""}</div>
+      ),
     },
     {
       accessorKey: "actual_budget",
       header: ({ column }) => (
         <DataTableColumnHeader column={column} title="Budget actuel" />
       ),
+      cell: ({ row }) => (
+        <div>
+          {row.getValue("actual_budget")
+            ? row.getValue("actual_budget") + " €"
+            : ""}
+        </div>
+      ),
     },
     {
       accessorKey: "difference",
       header: ({ column }) => (
         <DataTableColumnHeader column={column} title="Différence" />
+      ),
+      cell: ({ row }) => (
+        <div
+          style={{
+            color:
+              row.getValue("budget") && row.getValue("actual_budget")
+                ? (row.getValue("budget") as number) -
+                    (row.getValue("actual_budget") as number) >=
+                  0
+                  ? "green"
+                  : "red"
+                : "inherit",
+          }}
+        >
+          {row.getValue("budget") && row.getValue("actual_budget")
+            ? (row.getValue("budget") as number) -
+              (row.getValue("actual_budget") as number) +
+              " €"
+            : ""}
+        </div>
       ),
     },
     {

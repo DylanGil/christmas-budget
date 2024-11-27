@@ -13,9 +13,6 @@ export const Table = ({
 
   return (
     <div className="mx-auto flex size-full w-10/12 flex-col items-center justify-center">
-      <h1 className="text-4xl font-bold">Table</h1>
-      {/* <pre>{JSON.stringify(recipients, null, 2)}</pre> */}
-
       <div className="container mx-auto py-10">
         <DataTable
           columns={columns}

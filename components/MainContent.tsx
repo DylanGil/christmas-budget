@@ -1,6 +1,6 @@
 "use client";
 import { Recipient } from "@/app/types";
-import { Charts } from "@/components/Charts";
+import { Stats } from "@/components/Stats";
 import { Table } from "@/components/Table";
 import { useState } from "react";
 
@@ -9,7 +9,7 @@ export default function MainContent({ recipient }: { recipient: Recipient[] }) {
 
   return (
     <div>
-      <Charts recipients={recipients} />
+      <Stats recipients={recipients} />
       <Table recipients={recipients} setRecipients={setRecipients} />
     </div>
   );
