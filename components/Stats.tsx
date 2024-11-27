@@ -18,7 +18,7 @@ export const Stats = ({ recipients }: { recipients: Recipient[] }) => {
   return (
     <div className="flex max-xl:flex-col items-center justify-center gap-2">
       <Charts recipients={recipients} choice={1} />
-      <div className="flex max-xl:order-first pb-5 items-center flex-col w-11/12">
+      <div className="flex max-xl:order-first pb-5 items-center flex-col">
         <Star color="#ffe436" fill="#ffe436" size={58} className="mb-5" />
         <Stat
           title="Jour avant Noël"

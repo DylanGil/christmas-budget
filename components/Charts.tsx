@@ -66,7 +66,7 @@ export const Charts = ({
   } satisfies ChartConfig;
 
   return (
-    <div className="">
+    <div>
       {choice === 1 && (
         <Card className="w-96 flex flex-col justify-center items-center">
           <CardTitle className="text-center pb-5">
