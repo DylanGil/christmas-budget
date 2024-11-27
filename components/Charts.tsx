@@ -70,7 +70,7 @@ export const Charts = ({
   return (
     <div className="">
       {choice === 1 && (
-        <Card className="w-96 flex flex-col justify-center">
+        <Card className="w-96 flex flex-col justify-center items-center">
           <CardTitle className="text-center pb-5">
             Nombre de cadeaux par catégorie
           </CardTitle>
@@ -106,7 +106,7 @@ export const Charts = ({
       )}
 
       {choice === 2 && (
-        <Card className="w-96 flex flex-col justify-center">
+        <Card className="w-96 flex flex-col justify-center items-center">
           <CardTitle className="text-center pb-5">
             Budget total par catégorie
           </CardTitle>
