@@ -9,7 +9,7 @@ export default async function Home() {
   if (!user)
     return (
       <div className="flex flex-1 items-center justify-center">
-        <p>Veuillez vous connecter pour utiliser l&apos;application</p>
+        <p>Veuillez vous connecter pour accéder au site</p>
       </div>
     );
 

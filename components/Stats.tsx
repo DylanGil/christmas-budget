@@ -5,8 +5,8 @@ import { Charts } from "./Charts";
 
 const Stat = ({ title, value }: { title: string; value: number | string }) => {
   return (
-    <Card className="flex flex-col text-center w-40 h-15">
-      <div className="flex flex-col bg-accent text-secondary font-semibold">
+    <Card className="flex flex-col text-center xl:w-40 h-15">
+      <div className="flex flex-col bg-accent text-secondary max-md:px-1 font-semibold">
         {title}
       </div>
       <p className="text-xl font-bold text-primary">{value}</p>
@@ -18,7 +18,7 @@ export const Stats = ({ recipients }: { recipients: Recipient[] }) => {
   return (
     <div className="flex max-xl:flex-col items-center justify-center gap-2">
       <Charts recipients={recipients} choice={1} />
-      <div className="flex max-xl:order-first pb-5 items-center flex-col justify-center">
+      <div className="flex max-xl:order-first pb-5 items-center flex-col w-11/12">
         <Star color="#ffe436" fill="#ffe436" size={58} className="mb-5" />
         <Stat
           title="Jour avant Noël"
