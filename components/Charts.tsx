@@ -68,11 +68,11 @@ export const Charts = ({
   return (
     <div>
       {choice === 1 && (
-        <Card className="flex w-96 flex-col items-center justify-center">
+        <Card className="flex w-[26rem] flex-col items-center justify-center">
           <CardTitle className="pb-5 text-center">
             Nombre de cadeaux par catégorie
           </CardTitle>
-          <ChartContainer config={chartConfig} className="h-64">
+          <ChartContainer config={chartConfig} className="h-72">
             <PieChart>
               <ChartTooltip
                 content={<ChartTooltipContent nameKey="category" hideLabel />}
@@ -104,11 +104,11 @@ export const Charts = ({
       )}
 
       {choice === 2 && (
-        <Card className="flex w-96 flex-col items-center justify-center">
+        <Card className="flex w-[26rem] flex-col items-center justify-center">
           <CardTitle className="pb-5 text-center">
             Budget total par catégorie
           </CardTitle>
-          <ChartContainer config={chartConfig} className="h-64">
+          <ChartContainer config={chartConfig} className="h-72">
             <PieChart>
               <ChartTooltip
                 content={<ChartTooltipContent nameKey="category" hideLabel />}

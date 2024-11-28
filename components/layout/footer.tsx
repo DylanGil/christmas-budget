@@ -9,7 +9,7 @@ export const Footer = () => {
       }}
     >
       <div className="flex h-16 items-center justify-center md:mb-10 lg:mb-20">
-        <p className="">&copy; {new Date().getFullYear()} - Xeralya</p>
+        <p>&copy; {new Date().getFullYear()} - Xeralya</p>
       </div>
     </footer>
   );

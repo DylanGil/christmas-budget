@@ -125,7 +125,7 @@ export function DataTable<TData, TValue>({
       <Sheet open={isEditSheetOpen} onOpenChange={setIsEditSheetOpen}>
         <SheetContent>
           <SheetHeader>
-            <SheetTitle>Modifier</SheetTitle>
+            <SheetTitle>Créer</SheetTitle>
           </SheetHeader>
           <RecipientForm
             recipients={data as Recipient[]}

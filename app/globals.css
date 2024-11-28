@@ -18,12 +18,12 @@ body {
     --foreground: 163 80% 2%;
     --muted: 133 29% 91%;
     --muted-foreground: 133 7% 30%;
-    --popover: 163 45% 97%;
+    --popover: 179, 27%, 88%;
     --popover-foreground: 163 80% 1%;
     --card: 163 45% 97%;
     --card-foreground: 163 80% 1%;
     --border: 163 3% 90%;
-    --input: 163 3% 90%;
+    --input: 257 0% 0%;
     --primary: 133 82% 37%;
     --primary-foreground: 0 0% 100%;
     --secondary: 352, 73%, 40%;

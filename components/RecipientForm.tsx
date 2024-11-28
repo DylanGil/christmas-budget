@@ -264,7 +264,7 @@ export const RecipientForm = (props: RecipientFormProps) => {
                     <Checkbox
                       checked={field.value}
                       onCheckedChange={field.onChange}
-                      className="size-5"
+                      className="size-5 border-input"
                     />
                   </FormControl>
                 </div>
@@ -283,7 +283,7 @@ export const RecipientForm = (props: RecipientFormProps) => {
                     <Checkbox
                       checked={field.value}
                       onCheckedChange={field.onChange}
-                      className="size-5"
+                      className="size-5 border-input"
                     />
                   </FormControl>
                 </div>

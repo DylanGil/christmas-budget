@@ -5,8 +5,8 @@ import { Charts } from "./Charts";
 
 const Stat = ({ title, value }: { title: string; value: number | string }) => {
   return (
-    <Card className="flex flex-col text-center xl:w-40 h-15 border-2">
-      <div className="flex flex-col bg-accent text-secondary max-md:px-1 font-semibold rounded-t-md">
+    <Card className="h-15 flex w-40 flex-col border-2 text-center max-sm:w-36">
+      <div className="flex flex-col rounded-t-md bg-accent font-semibold text-secondary max-md:px-1">
         {title}
       </div>
       <p className="text-xl font-bold text-primary">{value}</p>
@@ -16,9 +16,9 @@ const Stat = ({ title, value }: { title: string; value: number | string }) => {
 
 export const Stats = ({ recipients }: { recipients: Recipient[] }) => {
   return (
-    <div className="flex max-xl:flex-col items-center justify-center gap-2">
+    <div className="flex items-center justify-center gap-1 max-xl:flex-col">
       <Charts recipients={recipients} choice={1} />
-      <div className="flex max-xl:order-first pb-5 items-center flex-col">
+      <div className="flex flex-col items-center pb-5 max-xl:order-first">
         <Star color="#ffe436" fill="#ffe436" size={58} className="mb-5" />
         <Stat
           title="Jour avant Noël"
@@ -30,23 +30,23 @@ export const Stats = ({ recipients }: { recipients: Recipient[] }) => {
             );
           })()}
         />
-        <div className="flex gap-2 mt-5">
+        <div className="mt-5 flex gap-2">
           <Stat
-            title="Cadeau achetés"
+            title="Cadeaux achetés"
             value={(() => {
               return recipients.filter((recipient) => recipient.is_purchased)
                 .length;
             })()}
           />
           <Stat
-            title="Cadeau embalés"
+            title="Cadeaux embalés"
             value={(() => {
               return recipients.filter((recipient) => recipient.is_wrapped)
                 .length;
             })()}
           />
         </div>
-        <div className="flex gap-2 mt-5">
+        <div className="mt-5 flex gap-2">
           <Stat
             title="Budget total"
             value={(() => {

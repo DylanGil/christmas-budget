@@ -104,7 +104,7 @@ export const CreateColumns = (
                     }}
                   >
                     <Button type="submit" variant="destructive">
-                      Confirm
+                      Confirmer
                     </Button>
                   </DialogClose>
                 </DialogFooter>
