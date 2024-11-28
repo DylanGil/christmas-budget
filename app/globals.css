@@ -14,7 +14,7 @@ body {
 
 @layer base {
   :root {
-    --background: 163 45% 98%;
+    --background: 179, 27%, 88%;
     --foreground: 163 80% 2%;
     --muted: 133 29% 91%;
     --muted-foreground: 133 7% 30%;
@@ -61,11 +61,11 @@ body {
     --destructive: 13 89% 53%;
     --destructive-foreground: 0 0% 100%;
     --ring: 163 82% 37%;
-    --chart-1: 220 70% 50%;
-    --chart-2: 160 60% 45%;
-    --chart-3: 30 80% 55%;
-    --chart-4: 280 65% 60%;
-    --chart-5: 340 75% 55%;
+    --chart-1: 356, 70%, 51%;
+    --chart-2: 159, 53%, 28%;
+    --chart-3: 128, 33%, 65%;
+    --chart-4: 56, 72%, 85%;
+    --chart-5: 187, 35%, 76%;
   }
 }
 
