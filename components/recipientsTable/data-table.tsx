@@ -124,15 +124,17 @@ export function DataTable<TData, TValue>({
       </div>
       <Sheet open={isEditSheetOpen} onOpenChange={setIsEditSheetOpen}>
         <SheetContent>
-          <SheetHeader>
-            <SheetTitle>Créer</SheetTitle>
-          </SheetHeader>
-          <RecipientForm
-            recipients={data as Recipient[]}
-            setRecipients={setRecipients}
-            setIsEditSheetOpen={setIsEditSheetOpen}
-            editOrCreate="create"
-          />
+          <div className="overflow-auto">
+            <SheetHeader>
+              <SheetTitle>Créer</SheetTitle>
+            </SheetHeader>
+            <RecipientForm
+              recipients={data as Recipient[]}
+              setRecipients={setRecipients}
+              setIsEditSheetOpen={setIsEditSheetOpen}
+              editOrCreate="create"
+            />
+          </div>
         </SheetContent>
       </Sheet>
     </>
