@@ -127,12 +127,13 @@ export const RecipientForm = (props: RecipientFormProps) => {
           name="name"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Nom</FormLabel>
+              <FormLabel className="ml-1">Nom</FormLabel>
               <FormControl>
                 <Input
                   placeholder="Jason"
                   {...field}
                   value={field.value as string}
+                  className="ml-1 w-[97%]"
                 />
               </FormControl>
               <FormMessage />
@@ -144,12 +145,13 @@ export const RecipientForm = (props: RecipientFormProps) => {
           name="gift"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Cadeau</FormLabel>
+              <FormLabel className="ml-1">Cadeau</FormLabel>
               <FormControl>
                 <Input
                   placeholder="Nintendo Switch"
                   {...field}
                   value={field.value as string}
+                  className="ml-1 w-[97%]"
                 />
               </FormControl>
               <FormMessage />
@@ -161,12 +163,13 @@ export const RecipientForm = (props: RecipientFormProps) => {
           name="shop"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Magasin</FormLabel>
+              <FormLabel className="ml-1">Magasin</FormLabel>
               <FormControl>
                 <Input
                   placeholder="Amazon"
                   {...field}
                   value={field.value as string}
+                  className="ml-1 w-[97%]"
                 />
               </FormControl>
               <FormMessage />
@@ -178,12 +181,13 @@ export const RecipientForm = (props: RecipientFormProps) => {
           name="link"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Lien</FormLabel>
+              <FormLabel className="ml-1">Lien</FormLabel>
               <FormControl>
                 <Input
                   placeholder="https://www.amazon.fr"
                   {...field}
                   value={field.value as string}
+                  className="ml-1 w-[97%]"
                 />
               </FormControl>
               <FormMessage />
@@ -195,13 +199,14 @@ export const RecipientForm = (props: RecipientFormProps) => {
           name="budget"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Budget</FormLabel>
+              <FormLabel className="ml-1">Budget</FormLabel>
               <FormControl>
                 <Input
                   placeholder="100"
                   {...field}
                   value={field.value as number}
                   type="number"
+                  className="ml-1 w-[97%]"
                 />
               </FormControl>
               <FormMessage />
@@ -213,13 +218,14 @@ export const RecipientForm = (props: RecipientFormProps) => {
           name="actual_budget"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Budget actuel</FormLabel>
+              <FormLabel className="ml-1">Budget actuel</FormLabel>
               <FormControl>
                 <Input
                   placeholder="100"
                   {...field}
                   value={field.value as number}
                   type="number"
+                  className="ml-1 w-[97%]"
                 />
               </FormControl>
               <FormMessage />
@@ -231,10 +237,10 @@ export const RecipientForm = (props: RecipientFormProps) => {
           name="category"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Catégorie</FormLabel>
+              <FormLabel className="ml-1">Catégorie</FormLabel>
               <Select onValueChange={field.onChange} defaultValue={field.value}>
                 <FormControl>
-                  <SelectTrigger>
+                  <SelectTrigger className="ml-1 w-[97%]">
                     <SelectValue placeholder="Choisir une catégorie" />
                   </SelectTrigger>
                 </FormControl>
@@ -259,7 +265,7 @@ export const RecipientForm = (props: RecipientFormProps) => {
             render={({ field }) => (
               <FormItem className="flex items-center space-x-3">
                 <div className="flex items-center space-x-2">
-                  <FormLabel>Acheté</FormLabel>
+                  <FormLabel className="ml-1">Acheté</FormLabel>
                   <FormControl>
                     <Checkbox
                       checked={field.value}
@@ -278,7 +284,7 @@ export const RecipientForm = (props: RecipientFormProps) => {
             render={({ field }) => (
               <FormItem className="space-x-3">
                 <div className="flex items-center space-x-2">
-                  <FormLabel>Emballé</FormLabel>
+                  <FormLabel className="ml-1">Emballé</FormLabel>
                   <FormControl>
                     <Checkbox
                       checked={field.value}

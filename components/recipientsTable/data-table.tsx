@@ -1,5 +1,6 @@
 "use client";
 
+import { ScrollArea } from "@/components/ui/scroll-area";
 import {
   ColumnDef,
   ColumnFiltersState,
@@ -124,7 +125,7 @@ export function DataTable<TData, TValue>({
       </div>
       <Sheet open={isEditSheetOpen} onOpenChange={setIsEditSheetOpen}>
         <SheetContent>
-          <div className="overflow-auto">
+          <ScrollArea className="size-full px-3">
             <SheetHeader>
               <SheetTitle>Créer</SheetTitle>
             </SheetHeader>
@@ -134,7 +135,7 @@ export function DataTable<TData, TValue>({
               setIsEditSheetOpen={setIsEditSheetOpen}
               editOrCreate="create"
             />
-          </div>
+          </ScrollArea>
         </SheetContent>
       </Sheet>
     </>
