@@ -153,6 +153,22 @@ export const CreateColumns = (
       header: ({ column }) => (
         <DataTableColumnHeader column={column} title="Lien" />
       ),
+      cell: ({ row }) => (
+        <div>
+          {row.getValue("link") ? (
+            <a
+              href={row.getValue("link") as string}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline"
+            >
+              Lien
+            </a>
+          ) : (
+            ""
+          )}
+        </div>
+      ),
     },
     {
       accessorKey: "budget",

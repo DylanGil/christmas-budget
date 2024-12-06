@@ -16,6 +16,7 @@ export default async function Home() {
   const { data: recipient } = (await supabase
     .from("recipient")
     .select()
+    .order("created_at", { ascending: false })
     .eq("user_id", user.id)) as { data: Recipient[] };
 
   return <MainContent recipient={recipient} />;
