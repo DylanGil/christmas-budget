@@ -211,9 +211,10 @@ export const CreateColumns = (
           }}
         >
           {row.getValue("budget") && row.getValue("actual_budget")
-            ? (row.getValue("budget") as number) -
-              (row.getValue("actual_budget") as number) +
-              " €"
+            ? (
+                (row.getValue("budget") as number) -
+                (row.getValue("actual_budget") as number)
+              ).toFixed(2) + " €"
             : ""}
         </div>
       ),
