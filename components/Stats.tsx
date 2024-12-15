@@ -51,10 +51,10 @@ export const Stats = ({ recipients }: { recipients: Recipient[] }) => {
             title="Budget total"
             value={(() => {
               return (
-                recipients.reduce(
+                (recipients.reduce(
                   (acc, recipient) => acc + (recipient.budget ?? 0),
                   0
-                ) + " €"
+                )).toFixed(2) + " €"
               );
             })()}
           />
@@ -62,10 +62,10 @@ export const Stats = ({ recipients }: { recipients: Recipient[] }) => {
             title="Budget dépensé"
             value={(() => {
               return (
-                recipients.reduce(
+                (recipients.reduce(
                   (acc, recipient) => acc + (recipient.actual_budget ?? 0),
                   0
-                ) + " €"
+                )).toFixed(2) + " €"
               );
             })()}
           />
@@ -73,13 +73,13 @@ export const Stats = ({ recipients }: { recipients: Recipient[] }) => {
             title="Budget restant"
             value={(() => {
               return (
-                recipients.reduce(
+                (recipients.reduce(
                   (acc, recipient) =>
                     acc +
                     (recipient.budget ?? 0) -
                     (recipient.actual_budget ?? 0),
                   0
-                ) + " €"
+                )).toFixed(2) + " €"
               );
             })()}
           />
